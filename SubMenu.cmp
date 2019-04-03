@@ -1,0 +1,48 @@
+<aura:component >
+<lightning:button variant="container" iconName="utility:threedots" onclick="{!c.toggleVisibility}"/>
+  <div aura:id="ddId" class="slds-dropdown slds-dropdown_left slds-hide">
+    <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+      <li class="slds-dropdown__item" role="presentation">
+        <a href="javascript:void(0);" role="menuitem" tabindex="0">
+          <span class="slds-truncate" title="Menu Item One">Insert Template</span>
+        </a>
+      </li>
+      <li class="slds-dropdown__item" role="presentation">
+        <a href="javascript:void(0);" role="menuitem" tabindex="0">
+          <span class="slds-truncate" title="Menu Item One">Email Format</span>
+        </a>
+      </li>
+      <li class="slds-dropdown__item" role="presentation">
+        <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+          <span class="slds-truncate" title="Menu Item Two">Business Unit</span>
+        </a>
+      </li>
+      <li class="slds-dropdown__item slds-has-submenu" role="presentation">
+        <a role="menuitem" href="javascript:void(0);" aria-haspopup="true" aria-expanded="true" tabindex="-1" onclick="{!c.toggleSubMenu}">
+          <span class="slds-truncate" title="Menu Item Three">Importance</span>
+          <lightning:button variant="container" iconName="utility:right" />
+        </a>
+        <div aura:id="smId" class="slds-dropdown slds-dropdown_submenu slds-dropdown_submenu-right slds-hide">
+          <ul class="slds-dropdown__list" role="menu" aria-label="Menu Item Three">
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                <span class="slds-truncate" title="Submenu Item One">High</span>
+              </a>
+            </li>
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate" title="Submenu Item Two">Normal</span>
+              </a>
+            </li>
+            <li class="slds-dropdown__item" role="presentation">
+              <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                <span class="slds-truncate" title="Submenu Item Three">Low</span>
+              </a>
+            </li>
+            <!--<li class="slds-has-divider_top-space" role="separator"></li>-->            
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aura:component>
