@@ -1,4 +1,5 @@
 <aura:component >
+<div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
 <lightning:button variant="container" iconName="utility:threedots" onclick="{!c.toggleVisibility}"/>
   <div aura:id="ddId" class="slds-dropdown slds-dropdown_left slds-hide">
     <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
@@ -44,5 +45,6 @@
         </div>
       </li>
     </ul>
+  </div>
   </div>
 </aura:component>
